@@ -23,7 +23,7 @@ namespace Modul5HW1
             var postRegisterUnsuccessful = await userClient.PostRegisterAsync(new { email = "sydney@fife" });
             var posrLoginSuccessful = await userClient.PostLoginAsync(new { email = "eve.holt@reqres.in", password = "cityslicka" });
             var posrLoginUnsuccessful = await userClient.PostLoginAsync(new { email = "peter@klaven" });
-            var delayGetList = await userClient.HttpGetRequestAsync<ListItems<User>>("api/users?delay=3");
+            var delayGetList = await userClient.HttpGetRequestAsync<ListItemsResponse<User>>("api/users?delay=3");
         }
     }
 }

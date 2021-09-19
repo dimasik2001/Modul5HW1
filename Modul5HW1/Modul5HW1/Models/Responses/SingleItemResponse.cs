@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modul5HW1.Models
 {
-    public class SingleItem<T>
+    public class SingleItemResponse<T>
     {
         public T Data { get; set; }
         public Support Support { get; set; }

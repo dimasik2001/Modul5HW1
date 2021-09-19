@@ -18,24 +18,24 @@ namespace Modul5HW1
             _httpClient = new HttpClient();
         }
 
-        public async Task<ListItems<User>> GetListUsersAsync()
+        public async Task<ListItemsResponse<User>> GetListUsersAsync()
         {
-            return await HttpGetRequestAsync<ListItems<User>>("api/users");
+            return await HttpGetRequestAsync<ListItemsResponse<User>>("api/users");
         }
 
-        public async Task<SingleItem<User>> GetUserAsync(int id)
+        public async Task<SingleItemResponse<User>> GetUserAsync(int id)
         {
-            return await HttpGetRequestAsync<SingleItem<User>>($"api/users/{id}");
+            return await HttpGetRequestAsync<SingleItemResponse<User>>($"api/users/{id}");
         }
 
-        public async Task<ListItems<Resource>> GetResourceListAsync()
+        public async Task<ListItemsResponse<Resource>> GetResourceListAsync()
         {
-            return await HttpGetRequestAsync<ListItems<Resource>>($"api/unknown");
+            return await HttpGetRequestAsync<ListItemsResponse<Resource>>($"api/unknown");
         }
 
-        public async Task<SingleItem<Resource>> GetResourceAsync(int id)
+        public async Task<SingleItemResponse<Resource>> GetResourceAsync(int id)
         {
-            return await HttpGetRequestAsync<SingleItem<Resource>>($"api/unknown/{id}");
+            return await HttpGetRequestAsync<SingleItemResponse<Resource>>($"api/unknown/{id}");
         }
 
         public async Task<CreateResponse> PostCreateAsync(object obj)

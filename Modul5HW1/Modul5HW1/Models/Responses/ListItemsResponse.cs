@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modul5HW1.Models
 {
-    public class ListItems<T>
+    public class ListItemsResponse<T>
     {
         public int Page { get; set; }
         public int Per_page { get; set; }
